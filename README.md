@@ -1,8 +1,10 @@
-# Тимур Гасанов — Data / Product Analyst
+# Тимур Гасанов — Data / Product Analyst · Системный аналитик
 
 Аналитик данных с 9 месяцами коммерческого опыта. Москва · Telegram [@TimoJR07](https://t.me/TimoJR07)
 
-**SQL · PostgreSQL · Python (pandas, NumPy, SciPy, scikit-learn) · A/B-тесты · Power BI · Yandex DataLens · REST API · FastAPI · Docker · Git**
+**Данные:** SQL · PostgreSQL · DuckDB · dbt · Airflow · Python (pandas, SciPy, scikit-learn) · A/B-тесты · Power BI · Yandex DataLens<br>
+**Системный анализ:** user stories и критерии приёмки · use case · BPMN · ER · UML sequence · C4 · REST / OpenAPI · AsyncAPI · RabbitMQ / Kafka<br>
+**Инженерия:** FastAPI · Docker · Git · pytest · GitHub Actions
 
 ---
 
@@ -15,15 +17,24 @@
 
 ---
 
-## Избранные проекты
+## Data / Product Analytics
 
-| Проект | Что внутри | Стек |
+| Проект | Результат | Стек |
 |---|---|---|
-| [**E-commerce Product Analytics**](https://github.com/TimoJR3/ecommerce-product-analytics-ru) | 20,7 млн сырых событий магазина косметики: упорядоченная воронка сессий (view → cart **16,9%**, cart → purchase **13,9%**), когортный retention, повторные покупки (**21,1%** по purchase-сессиям), проверка качества данных, SQL-витрины для BI, модель склонности к покупке | SQL, Python, pandas, Power BI / DataLens |
-| [**Experiment Lab**](https://github.com/TimoJR3/Experiment-Lab) | Учебная платформа A/B-тестов: детерминированный сплит, CR / ARPU / AOV, uplift, p-value, доверительные интервалы, правила интерпретации результата | PostgreSQL, FastAPI, Streamlit, SciPy |
-| [**Retail Demand & Inventory**](https://github.com/TimoJR3/retail-demand-inventory-analytics) | Прогноз спроса в онлайн-ритейле: витрина спроса, baseline против модели по WMAPE / MAE / RMSE / bias, ABC/XYZ-сегменты, сценарные метрики риска stockout / overstock | SQL, pandas, scikit-learn, Power BI |
-| [**Churn Risk & Model Monitoring**](https://github.com/TimoJR3/Churn-Risk-Model-Monitoring-Lab) | Модель оттока, inference API, журнал прогнозов, мониторинг дрейфа (PSI) | Python, FastAPI, PostgreSQL, Streamlit |
-| [**IT Skills Radar**](https://github.com/TimoJR3/IT_Skills_Radar) | Пайплайн по junior-вакансиям: валидация → очистка → нормализация навыков → PostgreSQL → SQL-витрины → REST API → дашборд; тесты и CI | PostgreSQL, FastAPI, Streamlit, Docker, pytest |
+| [**E-commerce Product Analytics**](https://github.com/TimoJR3/ecommerce-product-analytics-ru) | 20,7 млн событий: воронка сессий просмотр → корзина 16,9%, корзина → покупка 13,9%; 86% корзин не доходят до покупки — первая гипотеза для A/B-теста. Витрины в dbt (12 моделей, 37 тестов данных), пайплайн в Airflow | SQL (DuckDB), dbt, Airflow, Python, Power BI / DataLens |
+| [**Experiment Lab**](https://github.com/TimoJR3/Experiment-Lab) | A/B-тест от дизайна до вывода: размер выборки и MDE (для +5% к конверсии 13,4% нужно 41 430 пользователей на группу), SRM, CUPED, поправка Холма, z- и t-тесты | Python, SciPy, statsmodels, PostgreSQL, FastAPI |
+| [**Retail Demand & Inventory**](https://github.com/TimoJR3/retail-demand-inventory-analytics) | Прогноз спроса товар × страна: LightGBM точнее лучшего baseline (WMAPE 0,80 против 0,86, RMSE −27%); 10% позиций дают 71% ошибки — их стоит отдать на ручную проверку закупщику | SQL (DuckDB), pandas, LightGBM, Power BI |
+| [**Sales Analytics (Power BI)**](https://github.com/TimoJR3/sales-analytics-powerbi) | Отчёт о продажах в формате PBIP, метрики отчёта сверяются расчётом на Python | Power BI, DAX, Python, pytest |
+
+## Системный анализ
+
+| Проект | Результат | Стек |
+|---|---|---|
+| [**IT Skills Radar**](https://github.com/TimoJR3/IT_Skills_Radar) | Пайплайн по junior-вакансиям (валидация → нормализация навыков → PostgreSQL → API → дашборд) и [комплект аналитической документации](https://github.com/TimoJR3/IT_Skills_Radar/tree/main/docs/system-analysis): 8 user stories с критериями приёмки, BPMN AS-IS / TO-BE, ER, OpenAPI, sequence, спецификация интеграции с DLQ, C4 | PostgreSQL, FastAPI, Streamlit, OpenAPI, BPMN |
+| [**CloudRM** — прототип для ВКР](https://github.com/TimoJR3/cloud_multi_agent-manager) | 7 агентов управляют очередями и ресурсами ЦОД через события; контракт 16 событий описан в [AsyncAPI 3.0](https://github.com/TimoJR3/cloud_multi_agent-manager/blob/main/docs/asyncapi.yaml) с повторной доставкой и DLQ, тест сверяет спецификацию с кодом | Python, FastAPI, RabbitMQ, Kafka, PostgreSQL, Redis, Prometheus |
+| [**Тетрадь с пометками**](https://github.com/TimoJR3/teacher-homework) | Сайт для преподавателя английского и его учеников (реальный заказчик): задания, разметка ошибок по темам, цикл «сдано → на исправлении → принято»; 12 таблиц, доступ на уровне строк (31 политика RLS) с отдельным тестом прав | Next.js, Supabase (PostgreSQL, RLS), Vercel |
+
+Также: [Churn Risk & Model Monitoring](https://github.com/TimoJR3/Churn-Risk-Model-Monitoring-Lab) — модель оттока на синтетических данных (ROC-AUC 0,84 на отложенной выборке), API скоринга и мониторинг дрейфа PSI.
 
 ---
 
@@ -32,4 +43,4 @@
 - **Karpov.courses** — «Аналитик данных» (в процессе): Python, Git, SQL, теория вероятностей, статистика, продуктовая аналитика и A/B-тесты
 - Английский — B1
 
-Открыт к позициям **Junior / Junior+ Data Analyst, Product Analyst** в Москве: офис, гибрид или удалёнка.
+Открыт к позициям **Junior / Junior+ Data Analyst, Product Analyst, Системный аналитик** в Москве: офис, гибрид или удалёнка.
