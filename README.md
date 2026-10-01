@@ -24,7 +24,7 @@
 | [**E-commerce Product Analytics**](https://github.com/TimoJR3/ecommerce-product-analytics-ru) | 20,7 млн событий: воронка сессий просмотр → корзина 16,9%, корзина → покупка 13,9%; 86% корзин не доходят до покупки — первая гипотеза для A/B-теста. Витрины в dbt (12 моделей, 37 тестов данных), пайплайн в Airflow | SQL (DuckDB), dbt, Airflow, Python, Power BI / DataLens |
 | [**Experiment Lab**](https://github.com/TimoJR3/Experiment-Lab) | A/B-тест от дизайна до вывода: размер выборки и MDE (для +5% к конверсии 13,4% нужно 41 430 пользователей на группу), SRM, CUPED, поправка Холма, z- и t-тесты | Python, SciPy, statsmodels, PostgreSQL, FastAPI |
 | [**Retail Demand & Inventory**](https://github.com/TimoJR3/retail-demand-inventory-analytics) | Прогноз спроса товар × страна: LightGBM точнее лучшего baseline (WMAPE 0,80 против 0,86, RMSE −27%); 10% позиций дают 71% ошибки — их стоит отдать на ручную проверку закупщику | SQL (DuckDB), pandas, LightGBM, Power BI |
-| [**Sales Analytics (Power BI)**](https://github.com/TimoJR3/sales-analytics-powerbi) | Отчёт о продажах в формате PBIP, метрики отчёта сверяются расчётом на Python | Power BI, DAX, Python, pytest |
+| [**Sales Analytics (Power BI)**](https://github.com/TimoJR3/sales-analytics-powerbi) | Тестовое задание (принято): 6 KPI на DAX, ABC 70/90%, модель «звезда» из 6 таблиц; 279 убыточных заказов съедают 20% прибыли. Все метрики сверены независимым расчётом на Python до копейки | Power BI (DAX, Power Query, PBIP), Python, pytest |
 
 ## Системный анализ
 
