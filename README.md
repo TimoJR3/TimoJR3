@@ -35,7 +35,7 @@
 | [**IT Skills Radar**](https://github.com/TimoJR3/IT_Skills_Radar) | Пайплайн по junior-вакансиям (валидация → нормализация навыков → PostgreSQL → API → дашборд) и [комплект аналитической документации](https://github.com/TimoJR3/IT_Skills_Radar/tree/main/docs/system-analysis): 8 user stories с критериями приёмки, BPMN AS-IS / TO-BE, ER, OpenAPI, sequence, спецификация интеграции с DLQ, C4 | PostgreSQL, FastAPI, Streamlit, OpenAPI, BPMN |
 | [**CloudRM** — прототип для ВКР](https://github.com/TimoJR3/cloud_multi_agent-manager) | 7 агентов управляют очередями и ресурсами ЦОД через события; контракт 16 событий описан в [AsyncAPI 3.0](https://github.com/TimoJR3/cloud_multi_agent-manager/blob/main/docs/asyncapi.yaml) с повторной доставкой и DLQ, тест сверяет спецификацию с кодом | Python, FastAPI, RabbitMQ, Kafka, PostgreSQL, Redis, Prometheus |
 
-**Хакатон AI Journey Contest 2026 — Coordination Referee** (октябрь 2026, в процессе): классификация логов мультиагентных систем по 7 типам сбоев координации, успеху и шагу сбоя; ансамбль градиентного бустинга и BiGRU, локальная кросс-валидация совпадает с лидербордом до 0,001; метрика 0,919, 40-е место из 128 (на 17.10).
+**Хакатон AI Journey Contest 2026 — Coordination Referee** (октябрь 2026): классификация логов мультиагентных систем по 7 типам сбоев координации, успеху и шагу сбоя; ансамбль градиентного бустинга и BiGRU, локальная кросс-валидация совпадает с лидербордом до 0,001; метрика 0,919, 45-е место из 150 (топ-30%).
 
 Также: [Churn Risk & Model Monitoring](https://github.com/TimoJR3/Churn-Risk-Model-Monitoring-Lab) — модель оттока на синтетических данных (ROC-AUC 0,84 на отложенной выборке), API скоринга и мониторинг дрейфа PSI.
 
